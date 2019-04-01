@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="S3Geter.exe" version="1.0.0.0" publicKeyToken="0dc600a80fe22896" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="S3Geter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="S3Geter.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC マニフェスト オプション
+             Windows のユーザー アカウント制御のレベルを変更するには、
+             requestedExecutionLevel ノードを以下のいずれかで置換します。
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            requestedExecutionLevel 要素を指定すると、ファイルおよびレジストリの仮想化が無効にされます。
+            アプリケーションが下位互換性を保つためにこの仮想化を要求する場合、この要素を
+            削除します。
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AWSSDK.dll" size="8474624">
+      <assemblyIdentity name="AWSSDK" version="2.3.55.2" publicKeyToken="9F476D3089B52BE3" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>HHf4d9pkqmEpJkvdfT1ujgWCa2+zAbqpT5EXvTm/f/8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="S3Geter.exe" size="9200">
+      <assemblyIdentity name="S3Geter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>K1zL2EHkapf56PCzf+XrfPjPVXBL9DtxMy/DPe9MI3o=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="S3Geter.exe.config" size="807">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DPXjf6NCheUmjsgLBqhFU6FWwqGyCqPLz1mDjNIveLk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- このアプリケーションがテストされ、動作するよう設計された Windows バージョンの
+           一覧。適切な要素をコメント解除すると、最も互換性のある環境を Windows が
+           自動的に選択します。-->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=S4110-MORITA\SKS4101-USR" issuerKeyHash="79405c375b0dc06561e103fd8071730c114fc300" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Noi5xULUC6Aw5WuPPS9V3OwS/O4BBU3Hn9sjYQKhHbM=</DigestValue></Reference></SignedInfo><SignatureValue>N5b8Woook5atKhXGqvC1rjFPTiCFjiNb/KD7gG7oYAXQPPT9DkVnc0D4kuCPcxkP5LVoy/hVD7BoUVZf1rphxq1139MIzALd3xk+ibVjV4VlbpK5CKry2EIkDLw3XIlslaCcyd8CJ9OK6Q6RVyra5a5kqArhFGQekepO8mHpX1Q=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>v12fcWuCMjuPcxjmpwDm0qjO0tV39JsyeojxEpydaLeczt5J/n2DQymKWSOXIfMyBq/ZO4TJkt9AnH9goJmF/poN6E8GhJgreKtE0Xcka53wkfr9C7k2sCcFZTwYb4Vz0tKZUfSU13/5Cc5kPhrF+tcd+gnWbM1O6as2j4snyZE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="b31da1026123db9fc74d0501eefc12ecdc552f3d8f6be530a00bd442c5b98836" Description="" Url=""><as:assemblyIdentity name="S3Geter.exe" version="1.0.0.0" publicKeyToken="0dc600a80fe22896" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=S4110-MORITA\SKS4101-USR</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>EWVJy8HqHXBrKlR1cGq515DdoZ4wEXmpRwp42tfLKto=</DigestValue></Reference></SignedInfo><SignatureValue>mSnoFufzLJAryxCxFW0bRhA1QoEUJ1IVrURlLP4s/xa64CtnmBoM9IlCjayIMvF351kKDuyA/RFk98nd9wgFPA4wXiJWLdNZbAWizyroVV6o4oJq9K/3IpSfz7eDKdpp+hh/FEopf4XXgGwAfCqgU6Wfk2134PPGaPuBfEwL3YI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>v12fcWuCMjuPcxjmpwDm0qjO0tV39JsyeojxEpydaLeczt5J/n2DQymKWSOXIfMyBq/ZO4TJkt9AnH9goJmF/poN6E8GhJgreKtE0Xcka53wkfr9C7k2sCcFZTwYb4Vz0tKZUfSU13/5Cc5kPhrF+tcd+gnWbM1O6as2j4snyZE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB+TCCAWKgAwIBAgIQG+Orbc3otalAzrdsod/lfDANBgkqhkiG9w0BAQsFADA7MTkwNwYDVQQDHjAAUwA0ADEAMQAwAC0ATQBPAFIASQBUAEEAXABTAEsAUwA0ADEAMAAxAC0AVQBTAFIwHhcNMTkwNDAxMDQxMjA4WhcNMjAwMzMxMTAxMjA4WjA7MTkwNwYDVQQDHjAAUwA0ADEAMQAwAC0ATQBPAFIASQBUAEEAXABTAEsAUwA0ADEAMAAxAC0AVQBTAFIwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAL9dn3FrgjI7j3MY5qcA5tKoztLVd/SbMnqI8RKcnWi3nM7eSf59g0MpilkjlyHzMgav2TuEyZLfQJx/YKCZhf6aDehPBoSYK3irRNF3JGud8JH6/Qu5NrAnBWU8GG+Fc9LSmVH0lNd/+QnOZD4axfrXHfoJ1mzNTumrNo+LJ8mRAgMBAAEwDQYJKoZIhvcNAQELBQADgYEANABUdymh4WePFhVSk+CVBs/bSEnfVL8iBhL3XMNi/eTCIWiOv2amXkj3+DiWewaKq7QRAldSHHDFijPH8VhmvYrvj1vBXY00wqTz7xyOK7MPgi9ErTSwRHrLUK2YG6I3bVVNoSsv11ufJvqN5xp7DLxeG+Nlq5La74q52QsTBrY=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
